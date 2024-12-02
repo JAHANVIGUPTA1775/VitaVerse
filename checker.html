@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estimate Life</title>
+    <style>
+        body {
+            background-image: url('/images/bg.png');
+            /* Replace with your image path */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-left: -20%;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container,
+        .output-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 94%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #outputContainer {
+            display: none;
+            /* Initially hidden */
+        }
+
+        #output {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        #genderImage {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Form Section -->
+    <div class="form-container" id="formContainer">
+        <h2>Estimate Life</h2>
+        <form id="genderForm">
+            <div class="input-group">
+                <input type="number" id="total" placeholder="Enter Total" required />
+            </div>
+            <div class="input-group">
+                <select id="category" required>
+                    <option value="" disabled selected>Select Category</option>
+                    <option value="cat1">Category 1</option>
+                    <option value="cat2">Category 2</option>
+                    <option value="cat3">Category 3</option>
+                    <option value="cat4">Category 4</option>
+                    <option value="cat5">Category 5</option>
+                    <option value="cat6">Category 6</option>
+                    <option value="cat7">Category 7</option>
+                    <option value="cat8">Category 8</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <select id="field" required>
+                    <option value="" disabled selected>Select Field</option>
+                    <option value="education">Education</option>
+                    <option value="professional">Professional</option>
+                </select>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Output Section -->
+    <div class="output-container" id="outputContainer">
+        <div id="output"></div>
+        <img id="genderImage" src="" alt="Gender Image" />
+        <button id="backButton">Back to Form</button>
+    </div>
+
+    <script>
+        document.getElementById('genderForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            // Generate random gender
+            const genders = ['Male', 'Female'];
+            const randomGender = genders[Math.floor(Math.random() * genders.length)];
+
+            // Set the output text and image based on the gender
+            document.getElementById('output').innerText =  randomGender;
+
+            if (randomGender === 'Male') {
+                document.getElementById('genderImage').src = './images/boy.jpg'; // Replace with actual boy image path
+            } else {
+                document.getElementById('genderImage').src = './images/girl.png'; // Replace with actual girl image path
+            }
+
+            // Display output and hide form
+            document.getElementById('formContainer').style.display = 'none';
+            document.getElementById('outputContainer').style.display = 'block';
+        });
+
+        document.getElementById('backButton').addEventListener('click', function () {
+            // Show form and hide output
+            document.getElementById('formContainer').style.display = 'block';
+            document.getElementById('outputContainer').style.display = 'none';
+            // Reset form fields
+            document.getElementById('genderForm').reset();
+        });
+    </script>
+</body>
+
+</html>
