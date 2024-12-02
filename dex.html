@@ -4,186 +4,202 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
+
   <link rel="icon" type="image/x-icon" href="./favicon.png">
   <!-- Bootstrap Icons CDN link -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
-    />
-    <link rel="icon" type="image/x-icon" href="./favicon.png" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <!--=============== CSS ===============-->
-    <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+  <link rel="icon" type="image/x-icon" href="./favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!--=============== CSS ===============-->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 
-    <style>
-      ::-webkit-scrollbar {
-        width: 10px;
-      }
+  <style>
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
 
-      ::-webkit-scrollbar-thumb {
-        background-color: #3fbcc0;
-        border-radius: 10px;
-      }
+    ::-webkit-scrollbar-thumb {
+      background-color: #3fbcc0;
+      border-radius: 10px;
+    }
 
-      ::-webkit-scrollbar-thumb:hover {
-        background-color: #005253;
-        border-radius: 10px;
-      }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #005253;
+      border-radius: 10px;
+    }
 
-      ::-webkit-scrollbar-track {
-        background-color: #011212;
-      }
+    ::-webkit-scrollbar-track {
+      background-color: #011212;
+    }
 
-      #progressBar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 6px;
-        background-color: #3fbcc0;
-        z-index: 9999;
-      }
+    #progressBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 6px;
+      background-color: #3fbcc0;
+      z-index: 9999;
+    }
 
-      .custom-button {
-        position: relative;
-        background-color: #3fbcc0a6;
-        color: white;
-        border: 2px solid #000;
-        border-radius: 10px;
-        overflow: hidden;
-        transition: color 0.3s ease;
-        z-index: 1;
-        padding: 10px 15px; /* Adjust padding to make the button bigger */
-        font-size: 14px; 
-        margin-top: -10px;
-      }
-      
-      .custom-button::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 100%;
-        background-color: #55a5ea;
-        transition: width 0.3s ease;
-        z-index: -1;
-      }
-      
-      .custom-button:hover {
-        color: #fff;
-      }
-      
-      .custom-button:hover::before {
-        width: 100%;
-      }
+    .custom-button {
+      position: relative;
+      background-color: #3fbcc0a6;
+      color: white;
+      border: 2px solid #000;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: color 0.3s ease;
+      z-index: 1;
+      padding: 10px 15px;
+      /* Adjust padding to make the button bigger */
+      font-size: 14px;
+      margin-top: -10px;
+    }
 
-      .home__container {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-      }
-      
-      .home__image {
-        width: 50%;
-      }
-      
-      .home__data {
-        text-align: left;
-        flex: 1;
-      }
-      
+    .custom-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: #55a5ea;
+      transition: width 0.3s ease;
+      z-index: -1;
+    }
 
-      .about__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      
-      .imt {
-        width: 40%;
-      }
+    .home1__description {
+      font-size: 25px;
+      padding-top: 2%;
+      margin-left: 7%;
+      color: #3fbcc0;
+    }
 
-      .about__data {
-        text-align: left;
-        flex: 1; /* Allow text content to expand */
-        color: #fff; /* Set a default text color */
-        font-size: 16px; /* Set a default font size */
-        z-index: 1;
-        margin-left: 20px;
-      }
-      
-      .security__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      
-      .security__image {
-        width: 40%; /* Adjust image width as needed */
-      }
-      
-      .security__data {
-        text-align: left;
-        flex: 1;
-      }
-      
+    .custom-button:hover {
+      color: #fff;
+    }
+
+    .custom-button:hover::before {
+      width: 100%;
+    }
+
+    .home__container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .home__image {
+      width: 50%;
+    }
+
+    .home__data {
+      text-align: left;
+      display: flex;
+
+    }
 
 
-      .services__data {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Center content horizontally */
-        text-align: center; /* Center text */
-      }
+    .about__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-      .services__data .button-link {
-        margin: 20px auto 0; /* Center button and add spacing */
-      }
+    .imt {
+      width: 40%;
+    }
 
-      .app__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 50px 0;
-      }
-      
-      .app__data {
-        text-align: left;
-        flex-grow: 1; /* Allow the content to expand to fill available space */
-      }
+    .about__data {
+      text-align: left;
+      flex: 1;
+      /* Allow text content to expand */
+      color: #fff;
+      /* Set a default text color */
+      font-size: 16px;
+      /* Set a default font size */
+      z-index: 1;
+      margin-left: 20px;
+    }
 
-      .section__title-center {
-        text-align: center;
-        margin-right: 10px; /* Adjust the margin value as needed */
-      }
-      
-      .imt {
-        width: 30%;
-        padding-right: 60px; /* Add padding to the right */
-        margin-top: 20px; /* Move the image down */
-      }
-      
+    .security__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-      .contact__container {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        padding-top: 50px;
-        text-align: left;
-      }
-  
-      .contact__content {
-        flex: 1;
+    .security__image {
+      width: 40%;
+      /* Adjust image width as needed */
+    }
+
+    .security__data {
+      text-align: left;
+      flex: 1;
+    }
+
+    .services__data {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Center content horizontally */
+      text-align: center;
+      /* Center text */
+    }
+
+    .services__data .button-link {
+      margin: 20px auto 0;
+      /* Center button and add spacing */
+    }
+
+    .app__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px 0;
+    }
+
+    .app__data {
+      text-align: left;
+      flex-grow: 1;
+      /* Allow the content to expand to fill available space */
+    }
+
+    .section__title-center {
+      text-align: center;
+      margin-right: 10px;
+      /* Adjust the margin value as needed */
+    }
+
+    .section__title {
+      margin-top: 13%;
+    }
+
+    .imt {
+      width: 30%;
+      padding-right: 60px;
+      /* Add padding to the right */
+      margin-top: 20px;
+      /* Move the image down */
+    }
+
+
+    .contact__container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding-top: 50px;
+      text-align: left;
+    }
+
+    .contact__content {
+      flex: 1;
       max-width: 45%;
       display: flex;
       flex-direction: column;
@@ -191,79 +207,112 @@
       gap: 1rem;
       padding-left: 100px;
       color: white;
-      }
+    }
 
-      .contact__heading {
-        text-align: left;
-        margin-bottom: 0.5rem; /* Reduce space below heading */
-      }
+    .contact__heading {
+      text-align: left;
+      margin-bottom: 0.5rem;
+      /* Reduce space below heading */
+    }
 
-      .section__title-center {
-        position: relative;
-  right: 20px;
-      }
-  
-      .contact__description {
-        text-align: left;
-        margin-bottom: 1rem; /* Space below description */
-      }
-  
-      .contact__map {
-        flex: 1;
-        max-width: 70%;
-        margin-left: 10px;
-        margin-top: 20px;
-      }
+    .section__title-center {
+      position: relative;
+      right: 20px;
+    }
 
-      .contact__map iframe {
-        width: 85%; /* Ensure iframe takes full width of its container */
-      }
-  
-      .contact__address {
-        display: flex;
+    .contact__description {
+      text-align: left;
+      margin-bottom: 1rem;
+      /* Space below description */
+    }
+
+    .contact__map {
+      flex: 1;
+      max-width: 70%;
+      margin-left: 10px;
+      margin-top: 20px;
+    }
+
+    .contact__map iframe {
+      width: 85%;
+      /* Ensure iframe takes full width of its container */
+    }
+
+    .contact__address {
+      display: flex;
       align-items: center;
       gap: 10px;
       margin: 10px 0;
       color: white;
+    }
+
+    .contact__information {
+      font-weight: bold;
+      color: white;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .contact__container {
+        flex-direction: column;
+        align-items: center;
       }
-  
-      .contact__information {
-        font-weight: bold;
-        color: white;
+
+      .contact__content,
+      .contact__map {
+        max-width: 100%;
       }
-  
-      .button {
-        display: inline-block;
+
+      .contact__map {
+        margin-left: 0;
         margin-top: 20px;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        text-align: center;
       }
-  
-      .button:hover {
-        background-color: #0056b3;
-      }
-  
-      @media (max-width: 768px) {
-        .contact__container {
-          flex-direction: column;
-          align-items: center;
-        }
-  
-        .contact__content,
-        .contact__map {
-          max-width: 100%;
-        }
-  
-        .contact__map {
-          margin-left: 0;
-          margin-top: 20px;
-        }
-      }
-    </style>
+    }
+
+    .app__container {
+      display: flex;
+      /* border: 2px solid red; */
+    }
+
+    .section__title-center {
+      margin-top: 5%;
+      /* border: 2px solid red; */
+    }
+
+    .app__data p {
+      width: 80%;
+      font-size: 20px;
+      /* border: 2px solid red; */
+      margin-left: 20%;
+    }
+
+    .side_img {
+      height: 100%;
+      padding-left: 20%;
+      margin-top: 0;
+      margin-right: 10%;
+      /* border: 2px solid red; */
+      width: 50%;
+    }
+
+    .app__buttons {
+      margin-left: -35%;
+    }
+  </style>
   <script type="text/javascript">
     (function () {
       emailjs.init({
@@ -283,7 +332,7 @@
   <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
 
   <!-- CSS Files -->
-   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="index.css">
   <link href="Css-Files/animate.min.css" rel="stylesheet">
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -310,13 +359,50 @@
   <script src="chatboxx.js" defer></script>
   <style>
     @media screen and (max-width: 1275px) {
-      #rd-logo{
+      #rd-logo {
         visibility: hidden;
       }
+
+      .form1-container,
+      .output-container {
+        margin-left: 5%;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 30px;
+        text-align: center;
+      }
     }
-    img{
+
+    img {
       border-radius: 10px;
       padding: 0 0 0 0;
+    }
+  </style>
+  <style>
+    .button-91 {
+      color: #fff;
+      padding: 15px 25px;
+      background-color: #38D2D2;
+      background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+      box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+      border-radius: 14px;
+      font-weight: bold;
+      font-size: 16px;
+
+      border: 0;
+
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+
+      cursor: pointer;
+    }
+
+    .but-91 {
+      margin-top: 30%;
+      margin-left: 7%;
     }
   </style>
 </head>
@@ -355,218 +441,214 @@
 
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
-
-
       <a href="#appointment" class="appointment-btn scrollto">
         <span class="d-md-inline">EMERGENCY</span></a>
     </div>
   </header>
   <style>
-    .content{
+    .content {
       padding: 100px;
     }
   </style>
-    <main class="main">
-      <!--=============== HOME ===============-->
-      <section class="home section" id="home">
-        <div class="home__container container grid">
-          <div class="home__data">
-            <h1 class="home__title">VitaVerse|Delivery <br />Order Medicines</h1>
-            <p class="home__description">
-              Order your <b>Medicine</b> at any time and we will deliver them
-              right to where you are.
-            </p>
+  <main class="main">
+    <!--=============== HOME ===============-->
 
-            <a href="medicine.html" class="button">Get Started</a>
-            <img src="assets/img/rd.png" alt="home" class="home__image" style="display: block;" />
+    <section class="home section" id="home">
+      <div class="home__container container grid">
+        <h1 class="home__title">VitaVerse </h1>
+        <!-- HTML !-->
+        <a href="checker.html" target="_blank" class="but-91">
+          <button class="button-91" role="button"><b>Extimate The Life</b></button>
+        </a>
+    </section>
+
+    <!--=============== SERVICES ===============-->
+    <section class="services section container" id="services">
+      <h2 class="section__title">
+        Some Services We <br />
+        Offer
+      </h2>
+      <div class="services__container grid">
+        <div class="services__data">
+          <h3 class="services__subtitle">Death Rates Across Different
+            Profiles</h3>
+          <img src="assets/img/fig9.png" alt="imog" />
+          <p class="services__description">
+            Plot the distribution graph between the overall death rate
+            and gender after analysing the gender distribution data
+          </p>
+          <div class="button-container">
+            <a href="#" class="button button-link">Learn More</a>
           </div>
         </div>
-      </section>
 
-      <!--=============== ABOUT ===============-->
-      <section class="about section container" id="about">
-        <div class="about__container grid">
-          <div class="about__data">
-            <h2 class="section__title-center">
-              Find Out A Little More About Us
-            </h2>
-            <p class="about__description">
-              We are a company dedicated to the distribution of products by
-              delivery to your home or to the place where you are, with the best
-              quality of delivery.
-            </p>
-            <img src="assets/img/about.png" alt="about" class="imt"/>
+        <div class="services__data">
+          <h3 class="services__subtitle">Total Deaths versus States Distribution</h3>
+          <img src="assets/img/fig7.png" alt="imog" />
+          <p class="services__description">
+            Death rate in various age groups in India,
+            then plot the bar graph between the total deaths and age
+            groups
+          </p>
+          <div class="button-container">
+            <a href="#" class="button button-link">Learn More</a>
           </div>
         </div>
-      </section>
 
-      <!--=============== SECURITY ===============-->
-      <section class="security section container">
-        <div class="security__container grid">
-          <div class="security__data">
-            <h2 class="section__title-center">
-              Your Safety Is Important
-            </h2>
-            <p class="security__description">
-              When your order reaches you, we have the health safety protocols,
-              so that you are protected from any disease. Watch the video of how
-              the delivery is made.
-            </p>
-          </div>
-          <img src="assets/img/sec.png" alt="about" class="imt"/>
-        </div>
-      </section>
-
-      <!--=============== SERVICES ===============-->
-      <section class="services section container" id="services">
-        <h2 class="section__title">
-          Some Services We <br />
-          Offer
-        </h2>
-        <div class="services__container grid">
-          <div class="services__data">
-            <h3 class="services__subtitle">Payment Done</h3>
-            <img src="assets/img/s1.jpg" alt="imog" />
-            <p class="services__description">
-              Pay with a Visa or PayPal card and without much ado.
-            </p>
-            <div class="button-container">
-              <a href="#" class="button button-link">Learn More</a>
-            </div>
-          </div>
-
-          <div class="services__data">
-            <h3 class="services__subtitle">Find Your Product</h3>
-            <img src="assets/img/s2.jpg" alt="imog" />
-            <p class="services__description">
-              We offer sale of products through the Internet.
-            </p>
-            <div class="button-container">
-              <a href="#" class="button button-link">Learn More</a>
-            </div>
-          </div>
-
-          <div class="services__data">
-            <h3 class="services__subtitle">Product Received</h3>
-            <img src="assets/img/s3.jpg" alt="imog" />
-            <p class="services__description">
-              In our app you can see the delay time of your order.
-            </p>
-            <div class="button-container">
-              <a href="#" class="button button-link">Learn More</a>
-            </div>
+        <div class="services__data">
+          <h3 class="services__subtitle">Death Rate Versus Gender
+            Distribution</h3>
+          <img src="assets/img/fig2.png" alt="imog" />
+          <p class="services__description">
+            Information is effectively communicated through data vi
+            sualization techniques, frequently using graphs and charts.
+            Figure 6 is a pie chart illustrating the proportional distri
+            bution of total death rates across various marital statuses.
+          </p>
+          <div class="button-container">
+            <a href="#" class="button button-link">Learn More</a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!--=============== APP ===============-->
-      <section class="app section container">
-        <div class="app__container grid">
-          <div class="app__data">
-            <h2 class="section__title-center">
-              Watch Your Delivery At Any Time
-            </h2>
-            <p class="app__description">
-              With our app you can view the route of your order, from our local
-              headquarters to the place where you are. Look for the app now!
-            </p>
-            <div class="app__buttons">
-              <a href="#" class="button button-flex">
-                <i class="bx bxl-apple button__icon"></i> App Store
-              </a>
-              <a href="#" class="button button-flex">
-                <i class="bx bxl-play-store button__icon"></i> Google Play
-              </a>
-            </div>
-          </div>
-          <img src="assets\img\delivery.jpg" alt="home1" class="imt"/>
-        </div>
-      </section>
+    <!--=============== APP ===============-->
+    <section class="app section container">
+      <h2 class="section__title-center">
+        Contact To Doctors Any Time
+      </h2>
+      <div class="app__container grid">
+        <div class="app__data ">
+          <p class="app__description">
+            Connect with doctors anytime, anywhere!</p>
+          <p class="app__description">
+            Instant consultations for your health needs—convenient,
+            reliable, and just a
+            click away.
+          </p>
 
-      <!--=============== CONTACT US ===============-->
-      <section class="contact section container" id="contact">
-        <div class="contact__container">
-          <div class="contact__content">
-            <h2 class="section__title-center">
-              Contact Us From Here
-            </h2>
-            <p class="contact__description">
-              You can contact us from here, you can write to us, call us or
-              visit our service center, we will gladly assist you.
-            </p>
-            <div class="contact__address">
-              <i class="fa-solid fa-envelope"></i>
-              <p>Email: <span class="contact__information">delivery@email.com</span></p>
-            </div>
-            <div class="contact__address">
-              <i class="fa-solid fa-map"></i>
-              <p>Location: <span class="contact__information">New Delhi</span></p>
-            </div>
-            <div class="container">
-              <a href="index.html#contact" class="button">Contact Us</a>
-            </div>
-          </div>
-          <div class="contact__map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8343092661703!2d77.22972667550205!3d28.66467942564711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1720370841354!5m2!1sen!2sin" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+          <div class="app__buttons">
+            <a href="appointment.html" class="button button-flex">
+              <i class="fa-solid fa-phone"></i> Contact
+            </a>
           </div>
         </div>
-      </section>
+        <img src="https://medicasapp.com/dial-your-doctor/img/daildoctor/right-img.png" alt="home1" class="side_img" />
+      </div>
+    </section>
 
-      <section id="featured-services" class="featured-services">
+    <!--  <section class="app section container">
+      <div class="app__container grid">
+        <div class="app__data">
+          <h2 class="section__title-center">
+           Contact To Doctors Any Time
+          </h2>
+          <p class="app__description">
+            With our app you can view the route of your order, from our local
+            headquarters to the place where you are. Look for the app now!
+          </p>
+          <div class="app__buttons">
+            <a href="#" class="button button-flex">
+              <i class="bx bxl-apple button__icon"></i> App Store
+            </a>
+            <a href="#" class="button button-flex">
+              <i class="bx bxl-play-store button__icon"></i> Google Play
+            </a>
+          </div>
+        </div>
+        <img src="assets\img\delivery.jpg" alt="home1" class="imt" />
+      </div>
+    </section> -->
+
+    <!--=============== CONTACT US ===============-->
+    <section class="contact section container" id="contact">
+      <div class="contact__container">
+        <div class="contact__content">
+          <h2 class="section__title-center">
+            Contact Us From Here
+          </h2>
+          <p class="contact__description">
+            You can contact us from here, you can write to us, call us or
+            visit our service center, we will gladly assist you.
+          </p>
+          <div class="contact__address">
+            <i class="fa-solid fa-envelope"></i>
+            <p>Email: <span class="contact__information">vitaverse@email.com</span></p>
+          </div>
+          <div class="contact__address">
+            <i class="fa-solid fa-map"></i>
+            <p>Location: <span class="contact__information">New Delhi</span></p>
+          </div>
+          <div class="container">
+            <a href="index.html#contact" class="button">Contact Us</a>
+          </div>
+        </div>
+        <div class="contact__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10560.519179898003!2d77.35544643654552!3d28.614349381714522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cee22c60837b7%3A0x7c35343eceb7bde0!2sABES%20Engineering%20College!5e1!3m2!1sen!2sin!4v1732986668069!5m2!1sen!2sin" width=100% height="650" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="featured-services" class="featured-services">
 
 
-        <div class="container" data-aos="fade-up">
-          <div class="row">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
 
 
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-              <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                <div class="icon1"><i class="fas fa-heartbeat"></i></div>
-                <h4 class="title"><a href=".,/checkup.html"> Normal checkup</a></h4>
-                <p class="description">Detect medical issues, identify risk factors and illnesses before they start to
-                  cause problems.</p>
-              </div>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon1"><i class="fas fa-heartbeat"></i></div>
+              <h4 class="title"><a href=".,/checkup.html"> Dan Millman</a></h4>
+              <p class="description">You don’t have to control your thoughts. You just have to stop letting them control
+                you.</p>
             </div>
+          </div>
 
 
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">          
-              <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
-                <div class="icon2"><i class="fas fa-dna"></i></div>
-                <h4 class="title"><a href="test.html">Blood Test</a></h4>
-                <p class="description"> Get your tests done to look for signs of disease or agents that cause disease.</p>
-              </div>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+              <div class="icon2"><i class="fas fa-dna"></i></div>
+              <h4 class="title"><a href="test.html">Noam Shpancer</a></h4>
+              <p class="description"> Mental health is not a destination, but a process. It’s about how you drive, not
+                where you’re going.
             </div>
+          </div>
 
 
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-              <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon3"><i class="fas fa-temperature-high"></i></div>
-                <h4 class="title"><a href="">Body temperature</a></h4>
-                <p class="description">Body temperature can be anywhere from 97 F to 99 F. Babies and children have a
-                  little higher range: 97.9 F to 100.4 F.</p>
-              </div>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon3"><i class="fas fa-temperature-high"></i></div>
+              <h4 class="title"><a href="">Albus Dumbledore</a></h4>
+              <p class="description">Happiness can be found even in the darkest of times, if one only remembers to turn
+                on the light.</p>
             </div>
+          </div>
 
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
-              <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon4"><i class="fas fa-hand-holding-medical"></i></div>
-                <h4 class="title"><a href="medicine.html">Medicine use</a></h4>
-                <p class="description">Know what to use when to use and how to use.
-                </p>
-              </div>
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon4"><i class="fas fa-hand-holding-medical"></i></div>
+              <h4 class="title"><a href="medicine.html">John Green</a></h4>
+              <p class="description">There is hope, even when your brain tells you there isn’t.
+              </p>
             </div>
           </div>
         </div>
-      </section><!-- End Featured Services Section -->
+      </div>
+    </section><!-- End Featured Services Section -->
 
-  <!-- Bootstrap JS and dependencies -->
+    <!-- Bootstrap JS and dependencies -->
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-  <!-- ############### Footer ############### -->
-    </main>
+    <!-- ############### Footer ############### -->
+  </main>
 
   <footer>
     <div class="footer-wrapper">
@@ -604,23 +686,23 @@
               <li><a href="#">Testimonials</a></li>
             </ul>
           </section>
-          
-       <section class="footer-col" >
-      <div>
-      <h4>VitaVerse Newsletter</h4><br>
-      <p>
-        Subscribe to our newsletter for a weekly dose
-        of news, updates, helpful tips, and
-        exclusive offers.
-      </p>
-    </div>
-      <form action="#" class="subscribe-form">
-        <input type="email" placeholder="Your email" required>
-        <button type="submit" style="color: #005253;">SUBSCRIBE</button>
-      </form>
-      <p class="confirmation-message">Thank you for subscribing!</p>
-       </section>
-      
+
+          <section class="footer-col">
+            <div>
+              <h4>VitaVerse Newsletter</h4><br>
+              <p>
+                Subscribe to our newsletter for a weekly dose
+                of news, updates, helpful tips, and
+                exclusive offers.
+              </p>
+            </div>
+            <form action="#" class="subscribe-form">
+              <input type="email" placeholder="Your email" required>
+              <button type="submit" style="color: #005253;">SUBSCRIBE</button>
+            </form>
+            <p class="confirmation-message">Thank you for subscribing!</p>
+          </section>
+
 
           <script>
             document.querySelector('.subscribe-form').addEventListener('submit', function (event) {
@@ -641,38 +723,54 @@
               }, 5000); // Hide after 5 seconds
             });
           </script>
-            
-            <script>
-              document.querySelector('.subscribe-form').addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent the form from submitting in the traditional way
-            
-                // Show the modal popup
-                const modal = document.getElementById('popupModal');
-                modal.style.display = 'block';
-            
-                // Clear the input field
-                this.querySelector('input[type="email"]').value = '';
-            
-                // Hide the modal when the close button is clicked
-                const closeModal = document.querySelector('.modal .close');
-                closeModal.onclick = function() {
-                  modal.style.display = 'none';
-                }
-              });
-            
-              // Hide the modal when clicking outside of it
-              window.onclick = function(event) {
-                const modal = document.getElementById('popupModal');
-                if (event.target == modal) {
-                  modal.style.display = 'none';
-                }
+
+          <script>
+            document.querySelector('.subscribe-form').addEventListener('submit', function (event) {
+              event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+              // Show the modal popup
+              const modal = document.getElementById('popupModal');
+              modal.style.display = 'block';
+
+              // Clear the input field
+              this.querySelector('input[type="email"]').value = '';
+
+              // Hide the modal when the close button is clicked
+              const closeModal = document.querySelector('.modal .close');
+              closeModal.onclick = function () {
+                modal.style.display = 'none';
               }
-            </script>
+            });
+
+            // Hide the modal when clicking outside of it
+            window.onclick = function (event) {
+              const modal = document.getElementById('popupModal');
+              if (event.target == modal) {
+                modal.style.display = 'none';
+              }
+            }
+          </script>
+
+
+          <!-- form script -->
+          <script>
+            document.getElementById('genderForm').addEventListener('submit', function (e) {
+              console.log(e);
+            });
+
+            document.getElementById('backButton').addEventListener('click', function () {
+              // Show form and hide output
+              document.getElementById('form1-Container').style.display = 'block';
+              document.getElementById('output-Container').style.display = 'none';
+              // Reset form fields
+              document.getElementById('genderForm').reset();
+            });
+          </script>
 
         </div>
       </div>
     </div>
-   
+
     <div class="footer-bottom">
       <div class="footer-bottom-wrapper">
         <small id="ss">© <span id="year"></span><span> VitaVerse</span>&nbsp;| All Rights
@@ -680,30 +778,32 @@
         <div class="social-wrapper">
           <div class="social-links">
             <div style="margin-left: 300px;font-family: sans-serif;"><i>Follow&nbsp;Us&nbsp;:&nbsp;</i></div>
-            <div  id="insta">
-            <a href="https://www.instagram.com" target="_blank">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-          <div id="twit">
-            <a  href="https://www.twitter.com" target="_blank">
-              <i class="bi bi-twitter-x"></i>
-            </a>
-          </div>
-          <div id="git">
-            <a  href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
-          <div id="linkd">
-            <a  href="https://www.linkedin.com" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
+            <div id="insta">
+              <a href="https://www.instagram.com" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+            <div id="twit">
+              <a href="https://www.twitter.com" target="_blank">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+            </div>
+            <div id="git">
+              <a href="https://github.com/Anishkagupta04/RAPIDOC-HEALTHCARE-WEBSITE-" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+            <div id="linkd">
+              <a href="https://www.linkedin.com" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
 
-            <div id="fb"><a  href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
-           <div id="phn"> <a  href="+91 1234567890" title="+91 1234567890" target="_blank"><i class="fa-solid fa-phone"></i></a></div>
-            <div id="mail1" ><a  href="info@vitaverse.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></div>
+            <div id="fb"><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+            <div id="phn"> <a href="+91 1234567890" title="+91 1234567890" target="_blank"><i
+                  class="fa-solid fa-phone"></i></a></div>
+            <div id="mail1"><a href="info@vitaverse.com" target="_blank"><i class="fa-solid fa-envelope"></i></a></div>
           </div>
         </div>
       </div>
@@ -723,40 +823,40 @@
   <script>
     // First, make sure to include the GSAP library in your HTML file:
 
-// Then add this JavaScript code:
+    // Then add this JavaScript code:
 
-document.addEventListener("DOMContentLoaded", function() {
-  const images = document.getElementsByTagName('img');
+    document.addEventListener("DOMContentLoaded", function () {
+      const images = document.getElementsByTagName('img');
 
-  Array.from(images).forEach(img => {
-    img.addEventListener("mousemove", function(event) {
-      const rect = img.getBoundingClientRect();
-      const imgX = rect.left + rect.width / 2;
-      const imgY = rect.top + rect.height / 2;
-      const mouseX = event.clientX - imgX;
-      const mouseY = event.clientY - imgY;
-      
-      const rotateX = mouseY * 0.05; // Adjust this value to control tilt sensitivity
-      const rotateY = mouseX * -0.05; // Adjust this value to control tilt sensitivity
-      
-      gsap.to(img, {
-        rotationX: rotateX,
-        rotationY: rotateY,
-        ease: "power2.out",
-        duration: 0.3
+      Array.from(images).forEach(img => {
+        img.addEventListener("mousemove", function (event) {
+          const rect = img.getBoundingClientRect();
+          const imgX = rect.left + rect.width / 2;
+          const imgY = rect.top + rect.height / 2;
+          const mouseX = event.clientX - imgX;
+          const mouseY = event.clientY - imgY;
+
+          const rotateX = mouseY * 0.05; // Adjust this value to control tilt sensitivity
+          const rotateY = mouseX * -0.05; // Adjust this value to control tilt sensitivity
+
+          gsap.to(img, {
+            rotationX: rotateX,
+            rotationY: rotateY,
+            ease: "power2.out",
+            duration: 0.3
+          });
+        });
+
+        img.addEventListener("mouseleave", function () {
+          gsap.to(img, {
+            rotationX: 0,
+            rotationY: 0,
+            ease: "power2.out",
+            duration: 0.5
+          });
+        });
       });
     });
-
-    img.addEventListener("mouseleave", function() {
-      gsap.to(img, {
-        rotationX: 0,
-        rotationY: 0,
-        ease: "power2.out",
-        duration: 0.5
-      });
-    });
-  });
-});
   </script>
 
   <!-- JS Files -->
